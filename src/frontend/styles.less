@@ -1,0 +1,74 @@
+@import "~@sb1/ffe-core/less/ffe.less";
+@import '~@sb1/ffe-webfonts/fonts.less';
+@import '~@sb1/ffe-spinner/less/spinner';
+
+.container {
+    max-width: @app-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; 
+}
+
+/*============================================
+ ================= HEADER ===================
+============================================*/
+header {
+    margin-bottom: 0;
+    height: auto;
+    
+    .header__wrap {
+      width: 100%;
+      position: relative;
+      background-color: #fff;
+      transition: ease all .3s;
+      box-shadow: 0 2.5px 1.5px -1.5px #c0beb7;
+    }
+  
+    .header__content {
+      position: relative;
+      background-color: #fff;
+    }
+  
+    .header__logo {
+      width: 165px;
+      padding: 10px 0 0 0;
+      position: relative;
+      margin: auto;
+    }
+  
+    .header__nav {
+      padding: 0;
+      margin: auto;
+      border: none;
+      display: block;
+      text-align: center;
+      background-color: inherit;
+  
+      ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+      }
+  
+      li {
+        display: inline-block;
+        margin: 0 2% 0 0;
+        padding: 16px 0;
+      }
+  
+      a {
+        padding: 0;
+        display: block;
+        position: relative;
+        text-decoration: none;
+        font-family: MuseoSansRounded-500, arial;
+        font-size: 16px;
+        color: #4a5155;
+  
+        &:hover { color: @ffe-blue-azure; }
+  
+      }
+      .link--active { color: @ffe-blue-royal; }
+    }
+  }
+  
