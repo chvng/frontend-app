@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import Spinner from '@sb1/ffe-spinner-react';
+import Header from './header/Header.js';
+import Footer from './footer/Footer.js'
+
 
 class Root extends Component {
     render() {
         return (
-            <main>
-                <div style={{ textAlign: 'center' }}>
-                    <h2 className="ffe-h2" style={{ marginTop: '20px' }}>
-                        Heisann, her kan du lage komponenter eller hva du vil!
-                    </h2>
-                    <Spinner large={true} />
-                    <p>Venter på at du skal lage noe kult</p>
-                </div>
-            </main>
-        );
+            <React.Fragment>
+                <Header />
+                <main>
+                    {this.props.children}
+                </main>
+                <Footer /> 
+            </React.Fragment>
+        )
     }
 }
 
-export default Root;
+export default Root

@@ -1,9 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
-    entry: [
+  mode: 'development',
+  entry: [
     // Add the client which connects to our middleware
     // You can use full urls like 'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr'
     // useful if you run your app from another point like django
@@ -33,12 +34,19 @@ module.exports = {
           {
             loader: "css-loader",
             options: { sourceMap: true }
-          },  
+          },
           {
             loader: "less-loader",
             options: { outputStyle: 'expanded', sourceMap: true, sourceMapContents: true }
-          },        
+          },
         ]
+      },
+      {
+        test: /\.svg/,
+        use: {
+            loader: 'svg-url-loader',
+            options: {}
+        }
       },
       {
         test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -51,6 +59,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
   ]
 };

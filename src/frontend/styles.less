@@ -1,14 +1,17 @@
 @import "~@sb1/ffe-core/less/ffe.less";
 @import '~@sb1/ffe-webfonts/fonts.less';
+@import '~@sb1/ffe-grid/less/ffe-grid.less';
+@import '~@sb1/ffe-cards/less/cards';
+@import '~@sb1/ffe-buttons/less/buttons';
+@import '~@sb1/ffe-header/less/ffe-header';
 @import '~@sb1/ffe-spinner/less/spinner';
 
-.container {
-    max-width: @app-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px; 
-}
+@import 'components/header/header.less';
+@import 'components/systemstatus/SystemStyles.less';
+@import './components/systemstatus/systemstyles.less';
+@import './components/operationalmessages/operational.less';
 
+svg:not(:root) { overflow: visible; }
 /*============================================
  ================= HEADER ===================
 ============================================*/
@@ -71,4 +74,3 @@ header {
       .link--active { color: @ffe-blue-royal; }
     }
   }
-  
