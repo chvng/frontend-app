@@ -1,0 +1,103 @@
+.contact-information {
+    &__image {
+        display: none;
+    }
+
+    &__user {
+        &--name {
+            width: 100%;
+            margin-bottom: 20px;
+            border-bottom: 1px solid @ffe-grey-silver;
+        }
+        
+        &--ident {
+            margin-bottom: 20px;
+        }
+
+        &--phone {
+            margin-bottom: 20px;
+        }
+        
+        &--email {
+            margin-bottom: 20px;
+        }
+
+        &--company {
+            margin-bottom: 20px;
+        }
+
+        &--icon {
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+            fill: #676767;
+        }
+    }
+
+    &__profile {
+        padding-top: 35px;
+
+        &--information {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: @breakpoint-md) {
+    .contact-information {
+
+        &__image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin-left: 55px;
+        }
+        
+        &__user {
+          padding-right: 0;  
+
+          &--name {
+              width: 100%;
+              margin-bottom: 20px;
+              border-bottom: 1px solid @ffe-grey-silver;
+          }
+
+          &--ident {
+              margin-bottom: 20px;
+          }
+
+          &--phone {
+              margin-bottom: 20px;
+          }
+          
+          &--email {
+              margin-bottom: 20px;
+          }
+
+          &--company {
+              margin-bottom: 20px;
+          }
+
+          &--icon {
+            margin-right: 15px;
+            width: 16px;
+            height: 16px;
+            fill: #676767;
+          }
+
+          &--information {
+              margin-right: 50px;
+          }
+        }
+
+        &__profile {
+            padding-top: 45px;
+    
+            &--information {
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
