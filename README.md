@@ -18,10 +18,17 @@ The file structure of the application is as follows:
     |   ├── backend
     |   |   └── server.js
     |   └── frontend
-    |   |   └── components
-    |   |       └── root.js
-    |   ├── main.js
-    |   └── styles.less
+    |   |   ├── components
+    |   |   |   └── header
+    |   |   |       ├── Header.js
+    |   |   |       └── Menu.js
+    |   |   ├── styles
+    |   |   |   ├── components
+    |   |   |   └── header.less
+    |   |   |   └── styles.less
+    |   |   └── root.js
+    |   └── main.js
+    |   
     ├── package.json                     
     ├── README.md            
     └── webpack.config.js
