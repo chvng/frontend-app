@@ -20,6 +20,7 @@ function ContactInformation() {
         getUser(); 
     }, [])
 
+    // Test if user is fetched
     console.log(user);
 
     return (
@@ -42,11 +43,11 @@ function ContactInformation() {
                                 <div className="contact-information__user">
                                     <div className="contact-information__user--ident">
                                         <PersonIcon className="contact-information__user--icon"/>
-                                        <span className="contact-information__user--details">Ident:</span>
+                                        <span>Ident:</span>
                                     </div>
                                     <div className="contact-information__user--phone">
                                         <PhoneIcon className="contact-information__user--icon"/>
-                                        <span className="contact-information__user--details">Telefon:</span>
+                                        <span>Telefon:</span>
                                     </div>
                                     <div className="contact-information__user--email">
                                         <MailIcon className="contact-information__user--icon"/>
@@ -71,8 +72,6 @@ function ContactInformation() {
                 </GridCol>
             </GridRow>
         </Grid>
-
-
     )
 }
 
