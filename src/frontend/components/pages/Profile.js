@@ -90,6 +90,9 @@ function Subscription() {
 
     console.log(subscription);
 
+    const selectedAccounts = undefined;
+    const value = undefined;
+
     return (
         <div className="subscription">
             <Grid className="subscription__container">
@@ -113,7 +116,20 @@ function Subscription() {
                     </GridCol>
                     <GridCol lg={{cols: 4, offset: 3}}>
                         <Checkbox name="notification" value="sms" inline={true}>Motta varslinger på SMS</Checkbox>
-        
+                        {/* Delete this if this doesn't work tomorrow */}
+                        <AccountSelectorMulti
+                            accounts={subscription.results}
+                            id="account-selector-multi"
+                            locale="nb"
+                            onAccountSelected={acc => {
+                                const selectedAccounts = Array.isArray(selectedAccounts)
+                                    ? selectedAccounts
+                                    : [];
+                            }}
+                            onBlur={f => f}
+                            selectedAccounts={selectedAccounts}
+                            value={value}
+                        />
                     </GridCol>
                     <GridCol lg={4}>
                         <Checkbox name="notification" value="email" inline={true}>Motta varslinger på e-post</Checkbox>

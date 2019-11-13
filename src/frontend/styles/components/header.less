@@ -4,12 +4,10 @@
             display: block;
             flex-basis: 30%;
         }
-    
         &__button--rounded {
             border-radius: 30px;
             padding: 8px 20px;
         }
-    
         &__nav {
             width: 100%;
             padding: 0;
@@ -18,18 +16,19 @@
             display: block;
             text-align: center;
             background-color: inherit;
-    
             ul {
                 list-style: none;
                 margin: 0 auto;
                 padding: 0;
             }
-    
             li {
                 display: inline-block;
                 margin: 0 2% 0 0;
                 padding: 10px 0 5px 0;
-            } 
+            }
+        }
+        &__link--active::after {
+            bottom: -10px;
         }
     }
 }
