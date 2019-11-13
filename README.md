@@ -17,7 +17,11 @@ The file structure of the application is as follows:
     ├── src
     |   ├── backend
     |   |   └── server.js
-    |   └── frontend
+    |   ├── frontend
+    |   |   ├── api
+    |   |   |   ├── README.md
+    |   |   |   ├── user.json
+    |   |   |   └── subscriptionrule.json
     |   |   ├── components
     |   |   |   └── header
     |   |   |       ├── Header.js
