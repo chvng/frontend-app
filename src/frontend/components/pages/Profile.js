@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Checkbox } from '@sb1/ffe-form-react';
+import { DividerLine } from '@sb1/ffe-core-react';
+import { AccountSelectorMulti } from '@sb1/ffe-account-selector-react';
 import { Grid, GridCol, GridRow, InlineGrid } from '@sb1/ffe-grid-react';
 import PersonIcon from '@sb1/ffe-icons-react/lib/person-ikon';
 import PhoneIcon from '@sb1/ffe-icons-react/lib/telefon-ikon';
@@ -27,7 +30,7 @@ function ContactInformation() {
     return (
         <Grid className="contact-information__container">
             <GridRow>
-                <GridCol sm="12" md="8" lg="9">
+                <GridCol sm="12" md="8" lg={{cols: 9, offset: 3}}>
                     <div className="contact-information__user--name">
                         <h3 className="ffe-h3">{user.first_name} {user.last_name}</h3>
                     </div>
@@ -38,25 +41,23 @@ function ContactInformation() {
                                     <h5 className="ffe-h5">Kontaktinformasjon</h5>
                                 </div>
                             </GridCol>
-                        </GridRow>
-                        <GridRow>
                             <GridCol sm="4" lg="3">
                                 <div className="contact-information__user">
                                     <div className="contact-information__user--ident">
                                         <PersonIcon className="contact-information__user--icon"/>
-                                        <span>Ident:</span>
+                                        <span>Ident</span>
                                     </div>
                                     <div className="contact-information__user--phone">
                                         <PhoneIcon className="contact-information__user--icon"/>
-                                        <span>Telefon:</span>
+                                        <span>Telefon</span>
                                     </div>
                                     <div className="contact-information__user--email">
                                         <MailIcon className="contact-information__user--icon"/>
-                                        <span>E-post:</span>
+                                        <span>E-post</span>
                                     </div>
                                     <div className="contact-information__user--company">
                                         <CompanyIcon className="contact-information__user--icon"/>
-                                        <span>Selskap:</span>
+                                        <span>Selskap</span>
                                     </div>
                                 </div>
                             </GridCol>
@@ -82,7 +83,7 @@ function Subscription() {
     useEffect(() => {
         const getSubscriptionList = () => {
             const getSubscriptions = list;
-            setSubscription(getSubscriptions.results);
+            setSubscription(getSubscriptions);
         };
         getSubscriptionList();
     }, [])
@@ -93,10 +94,29 @@ function Subscription() {
         <div className="subscription">
             <Grid className="subscription__container">
                 <GridRow>
-                    <GridCol lg="12">
-                        <div className="subscription--header subscription--underline">
+                    <GridCol style={{ paddingBottom: '0.3em' }} lg={{cols: 2, offset: 3}}>
+                        <div className="subscription--header">
                             <h4 className="ffe-h4">Abonnering</h4>
                         </div>
+                    </GridCol>
+                </GridRow>
+                <GridRow>
+                    <GridCol className="profile__menu" lg="12">
+                        <div className="subscription__underline"></div>
+                    </GridCol>
+                </GridRow>
+                <GridRow>
+                    <GridCol className="subscription__description" lg={{cols: 12, offset: 3}}>
+                        <div className="subscription__text">
+                            <p>Vi sender varsling på SMS ved alvorlige driftshendelser og ellers kun på e-post. Du kan selv velge om du vil motta disse varslene under.</p>
+                        </div>
+                    </GridCol>
+                    <GridCol lg={{cols: 4, offset: 3}}>
+                        <Checkbox name="notification" value="sms" inline={true}>Motta varslinger på SMS</Checkbox>
+        
+                    </GridCol>
+                    <GridCol lg={4}>
+                        <Checkbox name="notification" value="email" inline={true}>Motta varslinger på e-post</Checkbox>
                     </GridCol>
                 </GridRow>
             </Grid>
