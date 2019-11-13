@@ -1,0 +1,27 @@
+{
+    "count": 5,
+    "next": null,
+    "previous": null,
+    "results": [
+      {
+        "url": "http://127.0.0.1:8000/api/v1/subscriptionrule/1/",
+        "name": "Alle dager 07:00-23:00"
+      },
+      {
+        "url": "http://127.0.0.1:8000/api/v1/subscriptionrule/4/",
+        "name": "Helger 06-15"
+      },
+      {
+        "url": "http://127.0.0.1:8000/api/v1/subscriptionrule/5/",
+        "name": "Helger 15-24"
+      },
+      {
+        "url": "http://127.0.0.1:8000/api/v1/subscriptionrule/2/",
+        "name": "Hverdager 08-17"
+      },
+      {
+        "url": "http://127.0.0.1:8000/api/v1/subscriptionrule/3/",
+        "name": "Hverdager 15-24"
+      }
+    ]
+  }

@@ -8,6 +8,7 @@ import CompanyIcon from '@sb1/ffe-icons-react/lib/kontorbygg-solid-ikon';
 // Test data - remove 
 // Remove the file too when merging with excellence repo
 import data from '../../api/user.json';
+import list from '../../api/subscriptionrule.json';
 
 function ContactInformation() {
     const [user, setUser] = useState({});
@@ -75,9 +76,40 @@ function ContactInformation() {
     )
 }
 
+function Subscription() {
+    const [subscription, setSubscription] = useState({results: []});
+
+    useEffect(() => {
+        const getSubscriptionList = () => {
+            const getSubscriptions = list;
+            setSubscription(getSubscriptions.results);
+        };
+        getSubscriptionList();
+    }, [])
+
+    console.log(subscription);
+
+    return (
+        <div className="subscription">
+            <Grid className="subscription__container">
+                <GridRow>
+                    <GridCol lg="12">
+                        <div className="subscription--header subscription--underline">
+                            <h4 className="ffe-h4">Abonnering</h4>
+                        </div>
+                    </GridCol>
+                </GridRow>
+            </Grid>
+        </div>
+    )
+}
+
 function Profile() {
     return (
-        ContactInformation()
+        <React.Fragment>
+            <ContactInformation/>
+            <Subscription/>
+        </React.Fragment>
     )
 }
 
