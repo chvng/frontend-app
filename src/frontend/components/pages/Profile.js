@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Checkbox } from '@sb1/ffe-form-react';
+import Dropdown from '@sb1/ffe-dropdown-react';
 import { DividerLine } from '@sb1/ffe-core-react';
-import { AccountSelectorMulti } from '@sb1/ffe-account-selector-react';
 import { Grid, GridCol, GridRow, InlineGrid } from '@sb1/ffe-grid-react';
 import PersonIcon from '@sb1/ffe-icons-react/lib/person-ikon';
 import PhoneIcon from '@sb1/ffe-icons-react/lib/telefon-ikon';
@@ -25,7 +25,7 @@ function ContactInformation() {
     }, [])
 
     // Test if user is fetched
-    console.log(user);
+    // console.log(user);
 
     return (
         <Grid className="contact-information__container">
@@ -78,7 +78,9 @@ function ContactInformation() {
 }
 
 function Subscription() {
-    const [subscription, setSubscription] = useState({results: []});
+    const [subscription, setSubscription] = useState({results:[]});
+    const [checkedForSMS, setCheckedForSMS] = useState(false);
+    const [checkedForEmail, setCheckedForEmail] = useState(false);
 
     useEffect(() => {
         const getSubscriptionList = () => {
@@ -87,11 +89,28 @@ function Subscription() {
         };
         getSubscriptionList();
     }, [])
-
     console.log(subscription);
 
-    const selectedAccounts = undefined;
-    const value = undefined;
+    const handleCheckedForSMS = () => {
+        if(checkedForSMS === true) {
+            return (
+                <Dropdown className="subscription__dropdown-box">
+                    {subscription.results.map((sub, index) => (
+                        <option 
+                            value={sub.name} 
+                            key={index}
+                        >
+                                {sub.name}
+                        </option>
+                    ))}
+                </Dropdown>
+            )
+        } 
+    }
+
+    const handleCheckedForEmail = () => {
+        // probably return a post request
+    }
 
     return (
         <div className="subscription">
@@ -114,24 +133,19 @@ function Subscription() {
                             <p>Vi sender varsling på SMS ved alvorlige driftshendelser og ellers kun på e-post. Du kan selv velge om du vil motta disse varslene under.</p>
                         </div>
                     </GridCol>
-                    <GridCol lg={{cols: 4, offset: 3}}>
-                        <Checkbox name="notification" value="sms" inline={true}>Motta varslinger på SMS</Checkbox>
-                        {/* Delete this if this doesn't work tomorrow */}
-                        <AccountSelectorMulti
-                            accounts={subscription.results}
-                            id="account-selector-multi"
-                            locale="nb"
-                            onAccountSelected={acc => {
-                                const selectedAccounts = Array.isArray(selectedAccounts)
-                                    ? selectedAccounts
-                                    : [];
-                            }}
-                            onBlur={f => f}
-                            selectedAccounts={selectedAccounts}
-                            value={value}
-                        />
+                    <GridCol style={{textAlign: 'center', display: 'inline-block'}} lg={{cols: 4, offset: 3}}>
+                        <Checkbox 
+                            name="notification" 
+                            value="sms" 
+                            inline={true}
+                            onChange={()=> {setCheckedForSMS(!checkedForSMS)}}
+                        >
+                                {console.log(checkedForSMS)}
+                                Motta varslinger på SMS
+                        </Checkbox>
+                        {handleCheckedForSMS()}
                     </GridCol>
-                    <GridCol lg={4}>
+                    <GridCol style={{textAlign: 'center', display: 'inline-block'}} lg={4}>
                         <Checkbox name="notification" value="email" inline={true}>Motta varslinger på e-post</Checkbox>
                     </GridCol>
                 </GridRow>

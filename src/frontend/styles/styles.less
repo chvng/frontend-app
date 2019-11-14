@@ -1,5 +1,4 @@
 // Importing FFE-styles
-@import '../../../node_modules/@sb1/ffe-account-selector-react/less/ffe-account-selector.less';
 @import '~@sb1/ffe-core/less/ffe';
 @import '~@sb1/ffe-form/less/form';
 @import '~@sb1/ffe-grid/less/ffe-grid';
@@ -11,3 +10,8 @@
 @import './components/profile';
 
 svg:not(:root) { overflow: visible; }
+select::-ms-expand { display: none; }
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
