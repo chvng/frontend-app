@@ -41,12 +41,18 @@ module.exports = {
           },
         ]
       },
-      {
-        test: /\.svg/,
-        use: {
-            loader: 'svg-url-loader',
-            options: {}
-        }
+{
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'url-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true, // webpack@1.x
+              disable: true, // webpack@2.x and newer
+            },
+          },
+        ]
       },
       {
         test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,

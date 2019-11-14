@@ -94,7 +94,16 @@ function Subscription() {
     const handleCheckedForSMS = () => {
         if(checkedForSMS === true) {
             return (
-                <Dropdown className="subscription__dropdown-box">
+                <Dropdown 
+                    className="subscription__dropdown-box"
+                    defaultValue="placeholder"
+                >
+                    <option 
+                        value="placeholder"
+                        disabled
+                    >
+                            Velg tidspunkt
+                    </option>
                     {subscription.results.map((sub, index) => (
                         <option 
                             value={sub.name} 
@@ -133,8 +142,8 @@ function Subscription() {
                             <p>Vi sender varsling på SMS ved alvorlige driftshendelser og ellers kun på e-post. Du kan selv velge om du vil motta disse varslene under.</p>
                         </div>
                     </GridCol>
-                    <GridCol style={{textAlign: 'center', display: 'inline-block'}} lg={{cols: 4, offset: 3}}>
-                        <Checkbox 
+                    <GridCol className="subscription__notification-choices" lg={{cols: 4, offset: 3}}>
+                        <Checkbox
                             name="notification" 
                             value="sms" 
                             inline={true}
@@ -145,7 +154,7 @@ function Subscription() {
                         </Checkbox>
                         {handleCheckedForSMS()}
                     </GridCol>
-                    <GridCol style={{textAlign: 'center', display: 'inline-block'}} lg={4}>
+                    <GridCol className="subscription__notification-choices" lg={4}>
                         <Checkbox name="notification" value="email" inline={true}>Motta varslinger på e-post</Checkbox>
                     </GridCol>
                 </GridRow>

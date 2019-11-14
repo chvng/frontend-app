@@ -37,7 +37,9 @@
     .contact-information {
         &__container {
             width: 100%;
-        }
+            background-repeat: no-repeat;
+            background-image: url("./card.png");
+            background-size: 21em;        }
         &__header {
             .ffe-h5 {
                 color: @ffe-grey-charcoal;
@@ -93,6 +95,10 @@
         width: 100%;
         &__description {
             padding-bottom: 1%;
+        }
+        &__notification-choices {
+            text-align: center;
+            display: inline-block;
         }
         &__underline {
             border-bottom: 1px solid @ffe-grey-silver;
