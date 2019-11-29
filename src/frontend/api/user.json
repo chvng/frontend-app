@@ -6,12 +6,12 @@
     "username": "admin",
     "first_name": "Chuong",
     "last_name": "Nguyen",
-    "email": "chuong.nguyen@apple.com",
+    "email": "chuong.nguyen@sparebank1.com",
     "is_staff": true,
     "is_active": true,
     "date_joined": "2019-01-09T09:24:28.256560+01:00",
     "mobile": "00000000",
-    "company": "Apple Inc.",
+    "company": "SpareBank 1 Utvikling",
     "last_ldap_sync": null,
     "groups": []
   }

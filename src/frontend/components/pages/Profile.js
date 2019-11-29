@@ -30,7 +30,7 @@ function ContactInformation() {
     return (
         <Grid className="contact-information__container">
             <GridRow>
-                <GridCol sm="12" md="8" lg={{cols: 9, offset: 3}}>
+                <GridCol sm="12" md="8" lg="12">
                     <div className="contact-information__user--name">
                         <h3 className="ffe-h3">{user.first_name} {user.last_name}</h3>
                     </div>
@@ -80,7 +80,6 @@ function ContactInformation() {
 function Subscription() {
     const [subscription, setSubscription] = useState({results:[]});
     const [checkedForSMS, setCheckedForSMS] = useState(false);
-    const [checkedForEmail, setCheckedForEmail] = useState(false);
 
     useEffect(() => {
         const getSubscriptionList = () => {
@@ -117,15 +116,11 @@ function Subscription() {
         } 
     }
 
-    const handleCheckedForEmail = () => {
-        // probably return a post request
-    }
-
     return (
         <div className="subscription">
             <Grid className="subscription__container">
                 <GridRow>
-                    <GridCol style={{ paddingBottom: '0.3em' }} lg={{cols: 2, offset: 3}}>
+                    <GridCol style={{ paddingBottom: '0.3em' }} lg="2">
                         <div className="subscription--header">
                             <h4 className="ffe-h4">Abonnering</h4>
                         </div>
@@ -137,12 +132,12 @@ function Subscription() {
                     </GridCol>
                 </GridRow>
                 <GridRow>
-                    <GridCol className="subscription__description" lg={{cols: 12, offset: 3}}>
+                    <GridCol className="subscription__description" lg="12">
                         <div className="subscription__text">
                             <p>Vi sender varsling på SMS ved alvorlige driftshendelser og ellers kun på e-post. Du kan selv velge om du vil motta disse varslene under.</p>
                         </div>
                     </GridCol>
-                    <GridCol className="subscription__notification-choices" lg={{cols: 4, offset: 3}}>
+                    <GridCol className="subscription__notification-sms" lg="4">
                         <Checkbox
                             name="notification" 
                             value="sms" 
@@ -154,8 +149,15 @@ function Subscription() {
                         </Checkbox>
                         {handleCheckedForSMS()}
                     </GridCol>
-                    <GridCol className="subscription__notification-choices" lg={4}>
-                        <Checkbox name="notification" value="email" inline={true}>Motta varslinger på e-post</Checkbox>
+                    <GridCol className="subscription__notification-email" lg="4">
+                        <Checkbox
+                            name="notification" 
+                            value="email" 
+                            inline={true} 
+                            checked={true}
+                        >
+                                Motta varslinger på e-post
+                        </Checkbox>
                     </GridCol>
                 </GridRow>
             </Grid>

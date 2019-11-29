@@ -37,9 +37,7 @@
     .contact-information {
         &__container {
             width: 100%;
-            background-repeat: no-repeat;
-            background-image: url("./card.png");
-            background-size: 21em;        }
+        }
         &__header {
             .ffe-h5 {
                 color: @ffe-grey-charcoal;
@@ -96,16 +94,25 @@
         &__description {
             padding-bottom: 1%;
         }
-        &__notification-choices {
-            text-align: center;
-            display: inline-block;
+        &__notification-email {
+            // text-align: center;
+            // display: inline-block;
+            .ffe-hidden-checkbox:checked + .ffe-checkbox::before {
+                border-color: #adadad;
+                background-color: #fff;
+            }
+            .ffe-hidden-checkbox:checked + .ffe-checkbox::after {
+                border-color: #adadad;
+                height: 11px;
+            }
         }
         &__underline {
             border-bottom: 1px solid @ffe-grey-silver;
         }
         &__dropdown-box {
             width: 60%;
-            margin: 0.6em auto;
+            transition: all @ffe-transition-duration @ffe-ease;
+            // margin: 0.6em auto;
         }
         .ffe-h4 {
             margin-bottom: 0.4em;
