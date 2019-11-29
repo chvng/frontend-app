@@ -1,0 +1,57 @@
+{
+    "count": 3,
+    "next": null,
+    "previous": null,
+    "results": [
+      {
+        "url": "http://127.0.0.1:8000/api/v1/subscribableservicegroup/3/",
+        "is_subscribed": false,
+        "name": "Created from API",
+        "description": "string",
+        "created": "2019-10-29T16:43:18.752633+01:00",
+        "services": []
+      },
+      {
+        "url": "http://127.0.0.1:8000/api/v1/subscribableservicegroup/1/",
+        "is_subscribed": false,
+        "name": "Digitalbank bedrift",
+        "description": "",
+        "created": "2019-10-11T18:07:27.040104+02:00",
+        "services": [
+          "http://127.0.0.1:8000/api/v1/subscribableservice/13/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/5/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/6/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/33/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/7/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/30/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/39/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/18/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/4/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/3/"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:8000/api/v1/subscribableservicegroup/2/",
+        "is_subscribed": false,
+        "name": "Digitalbank privat",
+        "description": "",
+        "created": "2019-10-11T18:07:39.815481+02:00",
+        "services": [
+          "http://127.0.0.1:8000/api/v1/subscribableservice/13/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/5/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/6/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/20/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/33/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/7/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/14/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/38/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/18/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/2/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/1/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/9/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/8/",
+          "http://127.0.0.1:8000/api/v1/subscribableservice/40/"
+        ]
+      }
+    ]
+  }

@@ -12,6 +12,7 @@ import CompanyIcon from '@sb1/ffe-icons-react/lib/kontorbygg-solid-ikon';
 // Remove the file too when merging with excellence repo
 import data from '../../api/user.json';
 import list from '../../api/subscriptionrule.json';
+import group from '../../api/subscribableservicegroup.json';
 
 function ContactInformation() {
     const [user, setUser] = useState({});
@@ -78,20 +79,20 @@ function ContactInformation() {
 }
 
 function Subscription() {
-    const [subscription, setSubscription] = useState({results:[]});
+    const [subscriptionRule, setSubscriptionRule] = useState({results:[]});
     const [checkedForSMS, setCheckedForSMS] = useState(false);
 
     useEffect(() => {
         const getSubscriptionList = () => {
             const getSubscriptions = list;
-            setSubscription(getSubscriptions);
+            setSubscriptionRule(getSubscriptions);
         };
         getSubscriptionList();
     }, [])
-    console.log(subscription);
+    console.log(subscriptionRule);
 
     const handleCheckedForSMS = () => {
-        if(checkedForSMS === true) {
+        if(checkedForSMS === true) { 
             return (
                 <Dropdown 
                     className="subscription__dropdown-box"
@@ -103,7 +104,7 @@ function Subscription() {
                     >
                             Velg tidspunkt
                     </option>
-                    {subscription.results.map((sub, index) => (
+                    {subscriptionRule.results.map((sub, index) => (
                         <option 
                             value={sub.name} 
                             key={index}
@@ -113,7 +114,7 @@ function Subscription() {
                     ))}
                 </Dropdown>
             )
-        } 
+        }
     }
 
     return (
@@ -134,7 +135,7 @@ function Subscription() {
                 <GridRow>
                     <GridCol className="subscription__description" lg="12">
                         <div className="subscription__text">
-                            <p>Vi sender varsling på SMS ved alvorlige driftshendelser og ellers kun på e-post. Du kan selv velge om du vil motta disse varslene under.</p>
+                            <p>Vi sender varsling på SMS ved alvorlige driftshendelser og ellers kun på e-post. Du kan selv velge om du ønsker å motta varslinger på SMS under.</p>
                         </div>
                     </GridCol>
                     <GridCol className="subscription__notification-sms" lg="4">
@@ -153,7 +154,8 @@ function Subscription() {
                         <Checkbox
                             name="notification" 
                             value="email" 
-                            inline={true} 
+                            disabled
+                            inline={true}
                             checked={true}
                         >
                                 Motta varslinger på e-post
@@ -165,11 +167,43 @@ function Subscription() {
     )
 }
 
+function Systems() {
+    const [subscribableGroup, setSubscribableGroup] = useState({});
+
+    useEffect(() => {
+        const getSubscribableGroupList = () => {
+            const getSubscribableGroup = group;
+            setSubscribableGroup(getSubscribableGroup);
+        }
+        getSubscribableGroupList();
+    }, [])
+
+    console.log(subscribableGroup);
+
+    return (
+        <Grid className="subscription__container">
+            <GridRow>
+                <GridCol style={{ paddingBottom: '0.3em' }} lg="2">
+                    <div className="subscription--header">
+                        <h4 className="ffe-h4">Systemer</h4>
+                    </div>
+                </GridCol>
+            </GridRow>
+            <GridRow>
+                <GridCol className="profile__menu" lg="12">
+                    <div className="subscription__underline"></div>
+                </GridCol>
+            </GridRow>
+        </Grid>
+    )
+}
+
 function Profile() {
     return (
         <React.Fragment>
             <ContactInformation/>
             <Subscription/>
+            <Systems/>
         </React.Fragment>
     )
 }

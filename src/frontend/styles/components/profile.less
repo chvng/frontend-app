@@ -111,8 +111,18 @@
         }
         &__dropdown-box {
             width: 60%;
-            transition: all @ffe-transition-duration @ffe-ease;
+            animation: slide-up 0.5s ease;
             // margin: 0.6em auto;
+        }
+        @keyframes slide-up {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .ffe-h4 {
             margin-bottom: 0.4em;
