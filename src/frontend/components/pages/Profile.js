@@ -122,7 +122,7 @@ function Subscription() {
             <Grid className="subscription__container">
                 <GridRow>
                     <GridCol style={{ paddingBottom: '0.3em' }} lg="2">
-                        <div className="subscription--header">
+                        <div className="subscription__header">
                             <h4 className="ffe-h4">Abonnering</h4>
                         </div>
                     </GridCol>
@@ -145,7 +145,6 @@ function Subscription() {
                             inline={true}
                             onChange={()=> {setCheckedForSMS(!checkedForSMS)}}
                         >
-                                {console.log(checkedForSMS)}
                                 Motta varslinger på SMS
                         </Checkbox>
                         {handleCheckedForSMS()}
@@ -168,7 +167,7 @@ function Subscription() {
 }
 
 function Systems() {
-    const [subscribableGroup, setSubscribableGroup] = useState({});
+    const [subscribableGroup, setSubscribableGroup] = useState({results: []});
 
     useEffect(() => {
         const getSubscribableGroupList = () => {
@@ -181,17 +180,43 @@ function Systems() {
     console.log(subscribableGroup);
 
     return (
-        <Grid className="subscription__container">
+        <Grid className="systems__container">
             <GridRow>
                 <GridCol style={{ paddingBottom: '0.3em' }} lg="2">
-                    <div className="subscription--header">
+                    <div className="systems__header">
                         <h4 className="ffe-h4">Systemer</h4>
                     </div>
                 </GridCol>
+                <GridCol className="systems__menu" lg="12">
+                    <div className="systems__underline"></div>
+                </GridCol>
             </GridRow>
             <GridRow>
-                <GridCol className="profile__menu" lg="12">
-                    <div className="subscription__underline"></div>
+                <GridCol className="systems__picker" lg="6">
+                    <div className="systems__description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div className="systems__dropdown">
+                    <Dropdown 
+                    className="subscription__dropdown-box"
+                    defaultValue="placeholder"
+                >
+                    <option 
+                        value="placeholder"
+                        disabled
+                    >
+                            Velg systemer
+                    </option>
+                    {subscribableGroup.results.map((sub, index) => (
+                        <option 
+                            value={sub.name} 
+                            key={index}
+                        >
+                                {sub.name}
+                        </option>
+                    ))}
+                </Dropdown>
+                    </div>
                 </GridCol>
             </GridRow>
         </Grid>

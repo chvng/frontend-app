@@ -95,8 +95,9 @@
             padding-bottom: 1%;
         }
         &__notification-email {
-            // text-align: center;
-            // display: inline-block;
+            .ffe-checkbox {
+                cursor: auto;
+            }
             .ffe-hidden-checkbox:checked + .ffe-checkbox::before {
                 border-color: #adadad;
                 background-color: #fff;
@@ -111,6 +112,7 @@
         }
         &__dropdown-box {
             width: 60%;
+            margin-top: 0.5em;
             animation: slide-up 0.5s ease;
             // margin: 0.6em auto;
         }
@@ -126,6 +128,19 @@
         }
         .ffe-h4 {
             margin-bottom: 0.4em;
+        }
+    }
+
+    .systems {
+        &__description {
+            padding-bottom: 1%;
+        }
+        &__underline {
+            border-bottom: 1px solid @ffe-grey-silver;
+            padding-bottom: 0;
+        }
+        &__menu {
+            padding-bottom: 0.2em;
         }
     }
 }
