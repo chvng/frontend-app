@@ -1,42 +1,10 @@
-.contact-information {
-    &__image {
-        display: none;
-    }
-    &__user {
-        &--name {
-            width: 100%;
-            margin-bottom: 20px;
-            border-bottom: 1px solid @ffe-grey-silver;
-        }
-        &--ident {
-            margin-bottom: 20px;
-        }
-        &--phone {
-            margin-bottom: 20px;
-        }
-        &--email {
-            margin-bottom: 20px;
-        }
-        &--company {
-            margin-bottom: 20px;
-        }
-        &--icon {
-            margin-right: 10px;
-            width: 15px;
-            height: 15px;
-            fill: #676767;
-        }
-        &--information {
-            display: block;
-            margin-bottom: 20px;
-        }
-    }
-}
+
 
 @media screen and (min-width: @breakpoint-md) {
     .contact-information {
         &__container {
             width: 100%;
+            padding-bottom: 0;
         }
         &__header {
             .ffe-h5 {
@@ -49,6 +17,9 @@
             height: 100%;
             margin-left: 55px;
         }
+        &__dividerline {
+            border-bottom: 1px solid @ffe-grey-silver;
+        }
         &__user {
             width: 100%;
             padding-right: 0;
@@ -56,7 +27,6 @@
             &--name {
                 width: 100%;
                 margin-bottom: 20px;
-                border-bottom: 1px solid @ffe-grey-silver;
             }
             &--ident {
                 margin-bottom: 20px;
@@ -90,7 +60,6 @@
     }
 
     .subscription {
-        width: 100%;
         &__description {
             padding-bottom: 1%;
         }
@@ -107,10 +76,10 @@
                 height: 11px;
             }
         }
-        &__underline {
+        &__dividerline {
             border-bottom: 1px solid @ffe-grey-silver;
         }
-        &__dropdown-box {
+        &__rule-choices {
             width: 60%;
             margin-top: 0.5em;
             animation: slide-up 0.5s ease;

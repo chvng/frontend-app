@@ -1,0 +1,294 @@
+{
+    "count": 41,
+    "next": null,
+    "previous": null,
+    "results": [
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/10/",
+        "is_subscribed": false,
+        "name": "Active Directory",
+        "description": "",
+        "created": "2019-10-11T17:58:39.466745+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/11/",
+        "is_subscribed": false,
+        "name": "Adobe Campaign",
+        "description": "",
+        "created": "2019-10-11T17:58:48.977733+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/13/",
+        "is_subscribed": false,
+        "name": "Aksjetjenesten",
+        "description": "",
+        "created": "2019-10-11T17:59:18.219611+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/32/",
+        "is_subscribed": false,
+        "name": "Åpne WEB-APIer",
+        "description": "",
+        "created": "2019-10-11T18:02:58.730478+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/15/",
+        "is_subscribed": false,
+        "name": "ASK (Forsikring)",
+        "description": "",
+        "created": "2019-10-11T17:59:51.892108+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/12/",
+        "is_subscribed": false,
+        "name": "Automatisk helseerklæring",
+        "description": "",
+        "created": "2019-10-11T17:59:02.799222+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/5/",
+        "is_subscribed": false,
+        "name": "BankID",
+        "description": "",
+        "created": "2019-10-11T17:57:20.746035+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/6/",
+        "is_subscribed": false,
+        "name": "BankID på mobil",
+        "description": "",
+        "created": "2019-10-11T17:57:26.021229+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/17/",
+        "is_subscribed": false,
+        "name": "Brukeradmin",
+        "description": "",
+        "created": "2019-10-11T18:00:46.244172+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/20/",
+        "is_subscribed": false,
+        "name": "Chat (eDailog24)",
+        "description": "",
+        "created": "2019-10-11T18:01:00.684705+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/21/",
+        "is_subscribed": false,
+        "name": "Citrix",
+        "description": "",
+        "created": "2019-10-11T18:01:10.938719+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/22/",
+        "is_subscribed": false,
+        "name": "Confluence",
+        "description": "",
+        "created": "2019-10-11T18:01:20.148337+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/33/",
+        "is_subscribed": false,
+        "name": "Debet- og Kredittkort",
+        "description": "",
+        "created": "2019-10-11T18:03:22.153896+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/27/",
+        "is_subscribed": false,
+        "name": "eAvtale",
+        "description": "",
+        "created": "2019-10-11T18:02:05.349945+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/28/",
+        "is_subscribed": false,
+        "name": "eCode",
+        "description": "",
+        "created": "2019-10-11T18:02:25.069177+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/7/",
+        "is_subscribed": false,
+        "name": "Engangskode på mobil",
+        "description": "",
+        "created": "2019-10-11T17:57:36.213419+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/29/",
+        "is_subscribed": false,
+        "name": "EVRY Kjerne",
+        "description": "",
+        "created": "2019-10-11T18:02:29.583738+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/30/",
+        "is_subscribed": false,
+        "name": "Fakturatjenesten (Nets Portal)",
+        "description": "",
+        "created": "2019-10-11T18:02:36.478268+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/31/",
+        "is_subscribed": false,
+        "name": "FAP (Felles Allianseplattform)",
+        "description": "",
+        "created": "2019-10-11T18:02:50.179587+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/14/",
+        "is_subscribed": false,
+        "name": "Fondshandel",
+        "description": "",
+        "created": "2019-10-11T17:59:23.034918+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/39/",
+        "is_subscribed": false,
+        "name": "Forsikring bedrift",
+        "description": "",
+        "created": "2019-10-11T18:04:59.733745+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/38/",
+        "is_subscribed": false,
+        "name": "Forsikring privat",
+        "description": "",
+        "created": "2019-10-11T18:04:54.493551+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/25/",
+        "is_subscribed": false,
+        "name": "Humio",
+        "description": "Elektronisk databehandling",
+        "created": "2019-10-11T18:01:35.889065+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/34/",
+        "is_subscribed": false,
+        "name": "Kkort KortCRM",
+        "description": "",
+        "created": "2019-10-11T18:03:54.377282+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/35/",
+        "is_subscribed": false,
+        "name": "Kkort Prime",
+        "description": "",
+        "created": "2019-10-11T18:03:58.905892+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/36/",
+        "is_subscribed": false,
+        "name": "Kkort søknadsbehandling",
+        "description": "",
+        "created": "2019-10-11T18:04:03.650187+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/18/",
+        "is_subscribed": false,
+        "name": "Kundeadmin",
+        "description": "",
+        "created": "2019-10-11T18:00:50.646774+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/4/",
+        "is_subscribed": false,
+        "name": "Mobilbank bedrift",
+        "description": "",
+        "created": "2019-10-11T17:57:12.012747+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/2/",
+        "is_subscribed": false,
+        "name": "Mobilbank privat",
+        "description": "",
+        "created": "2019-10-11T17:57:01.624932+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/3/",
+        "is_subscribed": false,
+        "name": "Nettbank bedrift",
+        "description": "",
+        "created": "2019-10-11T17:57:07.136585+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/1/",
+        "is_subscribed": false,
+        "name": "Nettbank privat",
+        "description": "",
+        "created": "2019-10-11T17:56:53.964021+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/37/",
+        "is_subscribed": false,
+        "name": "Nettverk",
+        "description": "",
+        "created": "2019-10-11T18:04:38.412699+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/19/",
+        "is_subscribed": false,
+        "name": "Porten",
+        "description": "",
+        "created": "2019-10-11T18:00:54.298803+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/16/",
+        "is_subscribed": false,
+        "name": "ProSak BankID",
+        "description": "",
+        "created": "2019-10-11T18:00:06.443957+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/9/",
+        "is_subscribed": false,
+        "name": "Salg og Kundeservice",
+        "description": "",
+        "created": "2019-10-11T17:57:58.175616+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/8/",
+        "is_subscribed": false,
+        "name": "SpareBank 1 ID (Uten BankID)",
+        "description": "",
+        "created": "2019-10-11T17:57:46.489563+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/24/",
+        "is_subscribed": false,
+        "name": "Splunk",
+        "description": "",
+        "created": "2019-10-11T18:01:27.616085+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/23/",
+        "is_subscribed": false,
+        "name": "Stash",
+        "description": "",
+        "created": "2019-10-11T18:01:23.656229+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/40/",
+        "is_subscribed": false,
+        "name": "Telefonbank",
+        "description": "",
+        "created": "2019-10-11T18:05:35.231153+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/41/",
+        "is_subscribed": false,
+        "name": "Trio",
+        "description": "",
+        "created": "2019-10-11T18:05:41.569449+02:00"
+      },
+      {
+        "url": "http://0.0.0.0:8000/api/v1/subscribableservice/26/",
+        "is_subscribed": false,
+        "name": "Zabbix",
+        "description": "",
+        "created": "2019-10-11T18:01:40.479169+02:00"
+      }
+    ]
+  }
