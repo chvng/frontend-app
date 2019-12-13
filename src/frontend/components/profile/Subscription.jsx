@@ -2,7 +2,7 @@ import { getSubscriptionRule } from '../../api/api';
 
 import React, { useState, useEffect } from 'react';
 import { Checkbox } from '@sb1/ffe-form-react';
-import Dropdown from '@sb1/ffe-dropdown-react';
+import Dropdown from '../dropdown/Dropdown';
 import { Grid, GridCol, GridRow, InlineGrid } from '@sb1/ffe-grid-react';
 
 function Subscription() {
@@ -15,28 +15,38 @@ function Subscription() {
     }, []);
     
     const subscriptionRuleOptions = () => {
+        const labelId = 'labelId1';
         if(checked) {
             return (
+                // <Dropdown
+                //     className="subscription__rule-choices"
+                //     defaultValue="placeholder"
+                //     onChange={e => setChanged(e.target.value)}
+                // >
+                //     <option
+                //         value="placeholder"
+                //         disabled
+                //     >
+                //         Velg tidspunkt
+                //     </option>
+                //     {subscription.results.map((sub, index) => (
+                //         <option
+                //             value={sub.name}
+                //             key={index}
+                //         >
+                //             {sub.name}
+                //         </option>
+                //     ))}
+                // </Dropdown>
                 <Dropdown
-                    className="subscription__rule-choices"
-                    defaultValue="placeholder"
-                    onChange={e => setChanged(e.target.value)}
-                >
-                    <option
-                        value="placeholder"
-                        disabled
-                    >
-                        Velg tidspunkt
-                    </option>
-                    {subscription.results.map((sub, index) => (
-                        <option
-                            value={sub.name}
-                            key={index}
-                        >
-                            {sub.name}
-                        </option>
-                    ))}
-                </Dropdown>
+                    className='subscription__rule-choices'
+                    labelId={labelId}
+                    inputProps={{placeholder: 'Velg'}}
+                    dropdownAttributes={['name']}
+                    dropdownList={subscription.results}
+                    noMatch={{text: 'Søket ga ingen treff'}}
+                    searchAttributes={['name']}
+                />
             )
         } 
     }
