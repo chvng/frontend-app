@@ -49,6 +49,7 @@ function Subscription() {
                 />
             )
         } 
+        //console.log(subscription.results);
     }
 
     return (

@@ -8,17 +8,19 @@ import { KryssIkon, ChevronIkon } from '@sb1/ffe-icons-react';
 import { Paragraph, MicroText} from '@sb1/ffe-core-react';
 
 import { string, arrayOf, shape, number, func, bool, object, oneOfType } from 'prop-types';
+// import filterDropdownList from './filterDropdownList';
+// import findSelectedItem from './findSelectedItem';
+
 
 function ListItemBody({item, dropdownAttributes, isHighlighted}) {
     const [titleAttribute, ...restAttributes] = dropdownAttributes;
     const title = item[titleAttribute];
     const rest = restAttributes.map(attribute => <MicroText key={attribute}>{item[attribute]}</MicroText>); 
-
     return (
         <div
-            className={classnames('ffe-searchable-dropdown__list-item-body', {
-                'ffe-searchable-dropdown__list-item-body--highlighted' : isHighlighted,
-            })}
+        className={classNames('ffe-searchable-dropdown__list-item-body', {
+            'ffe-searchable-dropdown__list-item-body--highlighted' : isHighlighted,
+        })}
         >
             {title}
             {!!rest.length && (
@@ -73,9 +75,11 @@ function Dropdown({
     
     const filterDropdownList = (dropdownList, searchAttributes, inputValue) => {
         const inputValueLowerCase = inputValue.toLowerCase();
-        return dropdownList.filter(item => {
-            searchAttributes.map(searchAttribute => item[searchAttribute].toLowerCase()).some(itemAttribute => itemAttribute.includes(inputValueLowerCase))
-        });
+        return dropdownList.filter(item =>
+            searchAttributes
+                .map(searchAttribute => item[searchAttribute].toLowerCase())
+                .some(itemAttribute => itemAttribute.includes(inputValueLowerCase)),
+        );
     }
     return (
         <Downshift
@@ -173,7 +177,7 @@ function Dropdown({
                                                 )}
                                             }
                                         </ListItemContainer>
-                                    )
+                                    );
                                 })}
                             </Scrollbars>
                         </div>
