@@ -14,7 +14,7 @@
     "test": ""
   },
   "dependencies": {
-    "express": "4.13.4",
+    "express": "4.17.3",
     "express-http-proxy": "1.2.0",
     "request": "2.88.0"
   },
